@@ -1,0 +1,96 @@
+/* Root Section */
+:root{
+    --yellow : hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+/* Font */
+@font-face {
+    font-family: 'Figtree';
+    src: url('fonts/static/Figtree-SemiBold.ttf') format('truetype');
+    font-weight:600 ;
+}
+@font-face {
+    font-family: 'Figtree';
+    src: url('fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight:800 ;
+}
+
+/* Body */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:var(--yellow);
+    font-family: "Figtree";
+}
+
+/* Container */
+.container{
+    height: 100dvh;
+    width: 100%;
+    display:grid;
+    place-items: center;
+}
+
+/* Blog Card */
+.card{
+    box-sizing: border-box;
+    max-width: 375px;
+    width: 80%;
+    height: auto;
+    aspect-ratio: 4/5;
+    background-color:var(--White);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px var(--Black);
+}
+/* Artile Image */
+.card .thmb{
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* label */
+.card .tag{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    background: var(--yellow);
+}
+
+/* Publish date */
+.card .date{
+    display: block;
+    font-size: 14px;
+}
+
+/* Article Title */
+.card .title{
+    margin: 1.5rem 0 .3rem 0;
+}
+.card .title:hover{
+    color: var(--yellow); 
+}
+/* Artcile Description */
+.card .desc{
+    color: var(--Grey);
+}
+
+/* Author */
+.card .author{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Author Image */
+.card .authorImg{
+    display:inline;
+    height: 30px;
+    margin-right: 10px;
+    font-weight: 600;
+}

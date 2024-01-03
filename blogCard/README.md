@@ -1,0 +1,1 @@
+Solution to the Blog Preview Card Challenge by Frontend Mentor.

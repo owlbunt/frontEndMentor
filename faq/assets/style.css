@@ -1,0 +1,137 @@
+/* Universal Values */
+:root{
+    --white: #ffffff;
+    --lightPink :#f9f0ff;
+    --black :#000000;
+    --darkPurple :#AD28EB;
+}
+
+/* Adding fonts */
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/static/WorkSans-Regular.ttf') format('woff2'),
+         url('fonts/static/WorkSans-Regular.ttf') format('woff');
+         font-weight: 400;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/static/WorkSans-SemiBold.ttf') format('woff2'),
+         url('fonts/static/WorkSans-SemiBold.ttf') format('woff');
+         font-weight: 600;
+}
+
+/* Body */
+body{
+    height: 100dvh;
+    width: 100dvw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Work Sans";
+    background: var(--white);
+    display: grid;
+    place-items: center;
+}
+/* For Adding The background Image */
+body::before{
+    content: '';
+    display: block;
+    background: url("images/background-pattern-desktop.svg");
+    height: 40%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+}
+/* FAQ container */
+.faq{
+    box-sizing: border-box;
+    height: auto;
+    width: 40%;
+    background: var(--white);
+    position: absolute;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    font-family: work sans;
+    transition: all .3s ease;
+}
+/* FAQ Main Heading */
+.faq .heading{
+    font-size: 40px;
+    margin-top: 0;
+    font-weight: 600;
+}
+/* Star Icon Before Heading */
+.faq .heading::before{
+    content: '';
+    display: inline-block;
+    background:url(images/icon-star.svg);
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top:10px;
+    margin-right: 10px;
+}
+
+/* Faq Items */
+.faq .faqItem{
+  border-bottom:1px solid #dddddd82;
+  padding: 10px 0;
+}
+/* Faq Question */
+.faq .question{
+    box-sizing: border-box;
+    font-weight: 400;
+    position: relative;
+    display:flex;
+    align-items: center;
+    padding-right: 30px;
+    margin: 10px 0;
+}
+
+.faq .question p{
+    margin: 0;
+}
+/* Icon After Question */
+.faq .question::after{
+    content:'';
+    display:inline-block;
+    background: var(--icon, url(images/icon-plus.svg));
+    height: 20px;
+    width: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* FAQ Hide */
+.faq .answer{
+    height: auto;
+    color:var(--black);
+    opacity: .5;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+.faq .answer p{
+    margin: 0;
+}
+.faq .answer.hide{
+    height: 0px;
+    transition: all .3s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+    .faq {
+        width: calc(100% - 40px);
+    }
+}
