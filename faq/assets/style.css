@@ -1,7 +1,7 @@
 /* Universal Values */
 :root{
     --white: #ffffff;
-    --lightPink :#f9f0ff;
+    --lightPink :#faeeff;
     --black :#000000;
     --darkPurple :#AD28EB;
 }
@@ -28,7 +28,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family:"Work Sans";
-    background: var(--white);
+    background: var(--lightPink);
     display: grid;
     place-items: center;
 }
