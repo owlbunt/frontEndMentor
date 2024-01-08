@@ -68,6 +68,12 @@ body{
     padding: 30px 50px;
     color: var(--white);
 }
+.sectionOne .heading{
+    margin: 0 0 30px 0;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: .5px;
+}
 .sectionOne p{
     color:var(--lightLavender);
     font-weight: 300;
@@ -123,9 +129,9 @@ body{
 /* All Scores */
 .scoreElement{
     display: flex;
-    background: #eff2fa65;
+    background: #eff2faa3;
     margin: 10px 0;
-    border-radius: 20px;
+    border-radius: 10px;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
@@ -175,4 +181,38 @@ body{
     margin:20px 0 0;
     letter-spacing: 2px;
     font-size: 14px;
+}
+.btn.btn:hover{
+    filter: contrast(2);
+}
+
+/* Responsive */
+@media screen and (max-width:500px){
+    body{
+        display: block;
+    }
+    .container{
+        display: flex;
+        height: 100dvh;
+        max-height: 100%;
+        border-radius: 0;
+        flex-wrap: wrap;
+    }
+    .sectionOne{
+        width: 100%;
+        height: 50dvh;
+        border-radius: 0 0 30px 30px;
+        padding: 20px;
+    }
+    .sectionOne .totalScore{
+        height: 40%;
+    }
+    .sectionTwo{
+        width: 100%;
+        height: 50dvh;
+        padding: 20px;
+    }
+    .sectionTwo .scoreElement{
+        height: 50px;
+    }
 }
