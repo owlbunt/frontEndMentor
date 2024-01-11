@@ -56,6 +56,7 @@ body{
   box-sizing: border-box;
   background: red;
   position: relative;
+  overflow: hidden;
 }
 
 /* Product Image */
@@ -65,14 +66,21 @@ body{
   background-size: cover;
   width: 100%;
   aspect-ratio: 4/3;
+  transition: all .3s ease;
+}
+.productImage:hover{
+  transform: scale(1.2);
 }
 
 /* Product Label */
 .productLabel{
   display: block;
   position:absolute;
-  background:var(--white);
-  padding: 8px 15px;
+  background:rgba(0, 0, 0, 0.2);
+  border: 0px solid var(--cream);
+  color: var(--cream);
+  backdrop-filter: blur(5px);
+  padding: 6px 10px;
   box-sizing:border-box ;
   border-radius: 5px;
   z-index: 2;
@@ -80,7 +88,7 @@ body{
   left :10px;
   text-transform: uppercase;
   font-size: 14px;
-  letter-spacing: 2px;
+  letter-spacing: .5px;
 }
 
 /* Section Two */
@@ -99,6 +107,9 @@ body{
   font-size:2rem;
   letter-spacing: 1px;
   color: var(--darkBlue);
+}
+.productTitle:hover{
+  text-decoration: underline;
 }
 
 /* Product Description */
@@ -135,7 +146,29 @@ button.addToCart{
   color: var(--white);
   border-radius: 10px;
   font-size:16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
 }
 button.addToCart:hover{
   background:var(--darkBlue);
+}
+button.addToCart .icon{
+  margin: 0 10px 0 0;
+}
+
+/* Responsive */
+@media screen and (min-width:480px){
+  .container{
+    display: flex;
+    max-width: 600px;
+  }
+  .productImage{
+    height: 100%;
+  }
+  .productLabel{
+    top: 10px;
+    bottom: auto;
+  }
 }
