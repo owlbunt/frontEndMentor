@@ -1,0 +1,111 @@
+:root{
+  --orange: #fb7413;
+  --white : #fafafc ;
+  --lightGray : #959eac;
+  --mediumGray : #7c8798; 
+  --darkBlue : #252d37;
+  --black : #121417;
+}
+
+/* Fonts */
+@font-face{
+  font-family: Overpass;
+  font-weight:400;
+  src: url(fonts/Overpass-Regular.ttf)
+}
+@font-face{
+  font-family: Overpass;
+  font-weight:700;
+  src: url(fonts/Overpass-Bold.ttf)
+}
+
+/* Body */
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Overpass;
+  background: var(--black);
+  height: 100dvh;
+  width: 100dvw;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+}
+
+/* Main Container */
+.container{
+  background: linear-gradient(var(--darkBlue),  #181e28);
+  box-sizing: border-box;
+  color: var(--white);
+  border-radius: 15px;
+  padding: 30px 20px 20px 20px;
+  margin: 25px;
+}
+.container::before{
+  content:'';
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  background: url(images/icon-star.svg);
+  background-repeat: no-repeat;
+  background-color: #2f3742;
+  background-position: center;
+  border-radius: 100%;
+}
+
+/* Heading */
+.heading{
+  font-family: Overpass;
+  font-size:26px;
+}
+/* Description */
+.desc{
+  color: var(--lightGray);
+  margin: 0 0 30px 0;
+}
+
+/* Rating */
+.rating{
+  display: flex;
+  justify-content: space-between;
+}
+.rating .btn{
+  border:0;
+  background: var(--darkBlue);
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  height: auto;
+  width: 45px;
+  color: var(--lightGray);
+  font-weight: 700;
+  box-sizing: border-box;
+  transition:background .2s ease;
+}
+.rating .btn:hover{
+  border: 1px solid var(--orange);
+}
+.rating .active{
+  background:var(--orange);
+  color: var(--white);
+}
+
+/* Submit Button */
+.submitBtn{
+  border: 0;
+  background: var(--mediumGray);
+  padding: 15px 0;
+  width: 100%;
+  border-radius: 25px;
+  margin:25px 0 5px 0;
+  font-family: Overpass;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:var(--black);
+  letter-spacing: 2px;
+  transition: background .2s ease;
+}
+.submitBtn.active{
+  background: var(--orange);
+  color: var(--white);
+}
