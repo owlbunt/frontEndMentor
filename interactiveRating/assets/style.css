@@ -41,6 +41,8 @@ body{
   border-radius: 15px;
   padding: 30px 20px 20px 20px;
   margin: 25px;
+  max-width: 350px;
+  position: relative;
 }
 .container::before{
   content:'';
@@ -81,6 +83,7 @@ body{
   font-weight: 700;
   box-sizing: border-box;
   transition:background .2s ease;
+  cursor: pointer;s
 }
 .rating .btn:hover{
   border: 1px solid var(--orange);
@@ -103,9 +106,53 @@ body{
   font-weight: 700;
   color:var(--black);
   letter-spacing: 2px;
-  transition: background .2s ease;
+  transition: background .05s ease;
+  cursor: not-allowed;
 }
 .submitBtn.active{
   background: var(--orange);
   color: var(--white);
+  cursor: pointer;
+}
+
+/* Confirmation */
+.confirm{
+  display:none;
+  position: absolute;
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  text-align: center;
+  padding: inherit;
+  box-sizing: border-box;
+}
+.confirm.active{
+  display: block;
+}
+.confirm h1{
+  font-size: 26px;
+  color: var(--white);
+  margin:0;
+}
+
+/* Rating Details */
+.ratingDetails{
+  padding: 10px;
+  margin: 20px auto;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--darkBlue);
+  color: var(--orange);
+  border-radius: 25px;
+}
+
+/* Thank You Descriptionn */
+.thankYouDesc{
+  color: var(--mediumGray);
 }
