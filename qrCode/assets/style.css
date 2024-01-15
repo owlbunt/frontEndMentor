@@ -1,0 +1,77 @@
+:root{
+    --white : #fafafc;
+    --lightGray:#d6e2f0;
+    --grayishBlue: #7b879d;
+    --darkBlue: #1f3251;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Outfit;
+    src: url(fonts/Outfit-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Outfit;
+    src: url(fonts/Outfit-Bold.ttf);
+    font-weight: 700;
+}
+
+/* Body */
+body{
+    font-family: Outfit;
+    height: 100dvh;
+    width: 100dvw;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: var(--lightGray);
+    display: grid;
+    place-items: center;
+}
+
+/* Main Container */
+.container{
+    box-sizing: border-box;
+    height: auto;
+    width:calc(100% - 40px);
+    max-width: 340px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 10px 10px 10px #7b879d28;
+}
+
+/* Qr Image */
+.qrImg{
+    background:var(--grayishBlue);
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.qrImg img{
+    height: auto;
+    width: 100%;
+    transition: all .3s ease;
+}
+.qrImg img:hover{
+    transform: scale(1.2);
+}
+
+/* Title */
+.title{
+    color: var(--darkBlue);
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+/* Description */
+.qrDesc{
+    color: var(--grayishBlue);
+    padding: 0 10px;
+}
