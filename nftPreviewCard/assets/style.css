@@ -1,0 +1,35 @@
+:root{
+    --softBlue : #8bacda;
+    --cyan :#00fff7;
+    --white : #fafafc;
+    --darkBlue : #0d192b;
+    --darkBlue1 : #14253d;
+    --darkBlue2 : #2f415b;
+}
+
+/* Font */
+@font-face {
+    font-family: Outfit;
+    src: url(fonts/Outfit-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Outfit;
+    src: url(fonts/Outfit-Bold.ttf);
+    font-weight: 700;
+}
+
+/* Body */
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Outfit;
+    font-size: 18px;
+    background: var(--darkBlue);
+}
+
+/* Container */
+.container{
+
+}
