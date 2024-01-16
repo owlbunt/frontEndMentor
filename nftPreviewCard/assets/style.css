@@ -63,10 +63,10 @@ body{
 .preview{
   height: 100%;
   width: 100%;
-  background: #8bacda52;
+  background: #8bacda37;
   position: absolute;
   border-radius: 10px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   opacity: 0;
   transition: all .3s ease;
 }
@@ -82,6 +82,9 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
+}
+.preview:hover{
+  opacity: 1;
 }
 
 /* Product Title */
@@ -108,7 +111,7 @@ body{
 .productDetails .eth{
   color: var(--cyan);
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 .productDetails .eth::before{
   content:'';
