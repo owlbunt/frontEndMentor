@@ -21,15 +21,141 @@
 
 /* Body */
 body{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Outfit;
-    font-size: 18px;
-    background: var(--darkBlue);
+  height: 100dvh;
+  width: 100dvw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Outfit;
+  font-size: 18px;
+  background: var(--darkBlue);
+  display: grid;
+  place-items:center;
 }
 
 /* Container */
 .container{
+  box-sizing: border-box;
+  background: var(--darkBlue1);
+  height: auto;
+  width:calc(100% - 40px);
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 20px;
+  color: var(--white);
+  max-width: 350px;
+}
 
+/* Product Image */
+.nftImg{
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: auto;
+  display: grid;
+  place-items: center;
+}
+.nftImg img{
+  height: auto;
+  width:100%;
+  border-radius: 10px;
+}
+.preview{
+  height: 100%;
+  width: 100%;
+  background: #8bacda52;
+  position: absolute;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: all .3s ease;
+}
+.preview::before{
+  display: inline-block;
+  content:'';
+  background:url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+/* Product Title */
+.title{
+  font-size: 25px;
+}
+.title:hover{
+  color: var(--cyan);
+}
+
+/* Description */
+.desc{
+  color: var(--softBlue);
+}
+
+/* Product Details */
+.productDetails{
+  background: inherit;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productDetails .eth{
+  color: var(--cyan);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.productDetails .eth::before{
+  content:'';
+  display: inline-block;
+  background: url(images/icon-ethereum.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 18px;
+  width: 18px;
+  margin: 0 10px 0 0;
+  position: relative;
+  top: 2px;
+}
+.productDetails .time{
+  color: var(--softBlue);
+}
+.productDetails .time::before{
+  content:'';
+  display: inline-block;
+  background: url(images/icon-clock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height:18px;
+  width: 18px;
+  margin: 0 5px 0 0;
+  position: relative;
+  top: 2.5px;
+}
+
+/* Author Details */
+.author{
+  padding: 10px 0;
+  background: inherit;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--darkBlue2);
+}
+.author .authorImg{
+  box-sizing:border-box;
+  height: 35px;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  margin-right: 15px;
+}
+.authorName{
+  color: var(--white);
+}
+.authorName span{
+  color: var(--softBlue);
 }
