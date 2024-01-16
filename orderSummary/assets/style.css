@@ -1,0 +1,165 @@
+:root{
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+
+/* Fonts */
+@font-face {
+    font-family:"Red Hat Display";
+    src: url(fonts/RedHatDisplay-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family:"Red Hat Display";
+    src: url(fonts/RedHatDisplay-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family:"Red Hat Display";
+    src: url(fonts/RedHatDisplay-Black.ttf);
+    font-weight: 900;
+}
+
+/* body */
+body{
+    font-family:"Red Hat Display" ;
+    height: 100dvh;
+    width: 100dvw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--paleBlue);
+    display: grid;
+    place-items: center;
+}
+body::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display:inline-block;
+    position: absolute;
+    z-index: -2;
+    background: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position: top;
+}
+
+/* Main Container */
+.container{
+    box-sizing: border-box;
+    height: auto;
+    width: calc(100% - 40px );
+    max-width: 380px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: var(--veryPaleBlue);
+    border-radius: 15px;
+}
+
+/* Product Image */
+.productImg{
+    width: 100%;
+    height: auto;
+}
+.productImg img{
+    width: 100%;
+    height: auto;
+}
+
+/* Content */
+.content{
+    box-sizing: border-box;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+/* Product Title */
+.productTitle{
+    font-size: 25px;
+    margin: 0;
+    color: var(--darkBlue);
+    font-weight: 900;
+}
+/* Product Description */
+.productDesc{
+    color: var(--desaturatedBlue);
+}
+
+/* Product Pricing */
+.productPricing{
+    box-sizing:border-box;
+    background: hsl(228, 24%, 96%);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.price{
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding-left: 70px;
+}
+.price::before{
+    content: '';
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: url(images/icon-music.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    border-radius: 100%;
+}
+.price span{
+    display: block;
+    color: var(--desaturatedBlue);
+}
+.price> span:nth-child(1){
+    font-weight: 900;
+    color: var(--darkBlue);
+}
+
+.productPricing .changePlan{
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--brightBlue);
+}
+
+/* Payment Button */
+.paymentBtn{
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--brightBlue);
+    color: var(--veryPaleBlue);
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/* Cancel Order */
+.cancelOrder{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--desaturatedBlue);
+}
+
+@media screen and (max-width:480px) {
+    body::before{
+        background: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: top;
+    }
+}
