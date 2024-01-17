@@ -12,7 +12,6 @@
     src: url(fonts/RedHatDisplay-Medium.ttf);
     font-weight: 500;
 }
-
 @font-face {
     font-family:"Red Hat Display";
     src: url(fonts/RedHatDisplay-Bold.ttf);
@@ -74,7 +73,7 @@ body::before{
 /* Content */
 .content{
     box-sizing: border-box;
-    padding: 30px 40px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -133,6 +132,9 @@ body::before{
     text-decoration: none;
     color: var(--brightBlue);
 }
+.productPricing .changePlan:hover{
+  color: #756BF0;
+}
 
 /* Payment Button */
 .paymentBtn{
@@ -146,6 +148,11 @@ body::before{
     font-weight: 500;
     font-size: 15px;
     letter-spacing: 1px;
+    transition: all .3s ease;
+    box-shadow: 0px 5px 20px var(--desaturatedBlue);
+}
+.paymentBtn:hover{
+  background: #756BF0;
 }
 
 /* Cancel Order */
@@ -153,6 +160,9 @@ body::before{
     text-decoration: none;
     font-weight: 700;
     color: var(--desaturatedBlue);
+}
+.cancelOrder:hover{
+  color: var(--darkBlue);
 }
 
 @media screen and (max-width:480px) {
