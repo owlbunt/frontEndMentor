@@ -1,0 +1,24 @@
+:root{
+    --veryDarkBlue : #090b1a;
+    --darkDesaturatedBlue : #1b1938;
+    --softViolet: #aa5cdb;
+    --white : #fafafc;
+    --trasparentWhite : #ffffffbf;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Lexend Deca;
+    src: url(fonts/LexendDeca-Regular.ttf);
+    font-weight: 400;
+}
