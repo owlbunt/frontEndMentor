@@ -29,7 +29,7 @@ body{
     height: 100dvh;
     width: 100dvw;
     margin: 0;
-    padding:20px 0;
+    padding:0;
     color: var(--white);
     display: grid;
     place-items: center;
@@ -40,21 +40,22 @@ body{
 /* Main Container */
 .container{
     background: var(--darkDesaturatedBlue);
-    width: calc(100% - 40px);
-    border-radius: 10px;
+    width: 100%;
     box-sizing: border-box;
 }
 
 /* Image Section  */
 .imgSection{
+    height: auto;
     width: 100%;
     position: relative;
     display: grid;
     place-items: center;
-    border-radius: 10px 10px 0 0 ;
+    box-sizing: border-box;
+    aspect-ratio: 5/4;
     overflow: hidden;
 }
-.imgSection::before{
+.productImg::before{
     content: '';
     display: inline-block;
     height: 100%;
@@ -64,9 +65,17 @@ body{
     height: 100%;
     width: 100%;
 }
-.imgSection img{
+.imgSection:hover .productImg{
+  transform: scale(1.2);
+}
+
+.imgSection .productImg{
+    background:url(images/imageHeader.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    transition:transform .4s ease;
 }
 
 /* Content Section */
@@ -90,6 +99,7 @@ body{
 .title span{
     color: var(--softViolet);
 }
+
 /* stats */
 .stats{
     margin: 40px 0;
@@ -107,12 +117,41 @@ body{
     color: var(--trasparentWhite);
 }
 
+/* Responsive */
 @media screen and (min-width:600px) {
+    /* Main Container */
     .container{
         display: flex;
         flex-direction: row-reverse;
+        align-items: center;
+        max-width: 900px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 0;
     }
+    /* Image Section */
+    .imgSection{
+      height: 100%;
+      width:100%;
+      aspect-ratio: 1/1;
+      margin: 0;
+    }
+    .imgSection .productImg{
+      background-size: cover;
+      background-position: center;
+    }
+    /* Content Section */
+    .contentSection{
+      padding: 40px;
+      text-align: left;
+    }
+    /* Stats */
     .stats{
         display: flex;
+        align-self: center;
+        margin: 0;
+    }
+    .statsItem{
+      margin-right:40px;
     }
 }
