@@ -1,0 +1,155 @@
+/* Universal Values */
+:root{
+  --orange : #e38826;
+  --cyan : #006970 ;
+  --darkCyan : #004241 ;
+  --white : #fafaf6;
+  --lightGray : #f2f2f2 ; 
+}
+
+/* Fonts */
+@font-face{
+  font-family: "Lexend Deca" ;
+  src: url(fonts/LexendDeca-Regular.ttf);
+  font-weight:400;
+}
+@font-face{
+  font-family: "Big Shoulders Display" ;
+  src: url(fonts/BigShouldersDisplay-Bold.ttf);
+  font-weight:700;
+}
+
+/* Body */
+body{
+  height: 100dvh;
+  width:100dvw;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca" ;
+  background: var(--lightGray);
+  display: grid;
+  place-items: center;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6{
+  font-family: "Big Shoulders Display" ;
+}
+
+/* Main Container */
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 40px 20px;
+  max-width: 400px;
+}
+
+/* Cards */
+.card.sedan, .card.suv, .card.luxury{
+  background: var(--orange);
+  border-radius: 10px 10px 0 0;
+  padding: 50px;
+  transition:all .3s ease;
+}
+.card.suv{
+  background: var(--cyan);
+  border-radius: 0;
+}
+.card.luxury{
+  background:var(--darkCyan);
+  border-radius: 0 0 10px 10px;
+}
+
+/* Car Icons */
+.sedan:before, .suv:before, .luxury::before {
+  content:'';
+  display: inline-block;
+  background: url('images/icon-sedans.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 80px;
+  width:80px;
+}
+.suv::before{
+  background: url('images/icon-suvs.svg');
+  background-repeat: no-repeat;
+}
+.luxury::before{
+  background: url('images/icon-luxury.svg');
+  background-repeat: no-repeat;
+}
+
+/* Title */
+.title{
+  text-transform: uppercase;
+  color: var(--lightGray);
+  letter-spacing: 2px;
+}
+
+/* Description */
+.desc{
+  line-height: 1.5;
+  color: var(--white);
+  opacity: .75;
+}
+
+/* Button */
+.btn{
+  background: var(--lightGray);
+  border: 0;
+  padding: 13px 30px;
+  border-radius: 30px;
+  font-weight: 400;
+  color: var(--orange);
+  margin-top:30px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1.5px solid var(--lightGray);
+}
+.suv .btn{
+  color: var(--cyan);
+}
+.luxury .btn{
+  color: var(--darkCyan);
+}
+.btn:hover{
+  color: var(--lightGray);
+  background: transparent;
+}
+
+/* Responsive Design */
+/* Tablets */
+@media (min-width:768px) and (max-width:991px){
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+  }
+  .card:nth-child(3){
+    grid-column: span 2;
+  }
+  .card.sedan{
+    border-radius: 10px 0 0;
+  }
+  .card.suv{
+    border-radius: 0 10px 0 0;
+  }
+}
+/* Desktop */
+@media screen and (min-width:992px){
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    max-width: 1000px;
+  }
+  .card.sedan{
+    border-radius: 10px 0 0 10px;
+  }
+  .card.suv{
+    border-radius: 0;
+  }
+  .card.luxury{
+    border-radius: 0 10px 10px 0;
+  }
+}
