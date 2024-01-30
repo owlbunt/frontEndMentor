@@ -1,0 +1,83 @@
+/* Default Values */
+:root{
+    --white : #fafafc;
+    --darkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+    --fontSize : 13px;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Manrope";
+    src: url(fonts/Manrope-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(fonts/Manrope-Bold.ttf);
+    font-weight: 700;
+}
+
+/* body */
+body{
+    font-family:"Manrope";
+    font-size: var(--fontSize);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    background: var(--lightGrayishBlue);
+}
+
+/* Maon Container */
+.container{
+    background:var(--white);
+    width: calc(100% - 50px);
+    max-width: 350px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Article Image */
+.postImg{
+    aspect-ratio: 6/4;
+    overflow: hidden;
+}
+.postImg img{
+    width: 100%;
+}
+
+/* Article Info */
+.postInfo{
+    padding: 30px;
+}
+
+/* Post Title  */
+.postTitle{
+    font-size: 16px;
+    color: var(--darkGrayishBlue);
+}
+
+/* Post Description */
+.postDesc{
+    line-height: 1.5;
+    word-spacing: 1px;
+    color: var(--desaturatedDarkBlue);
+}
+
+/* Author Info */
+.authorInfo{
+    background: red;
+    display: flex;
+    align-items: center;
+
+}
+
+/* Author Img */
+.authorImg{
+    max-height: 40px;
+    border-radius: 100%;
+}
