@@ -1,5 +1,6 @@
 // Post Share 
-let shareBtn = document.querySelector(".shareBtn")
+let shareBtn = document.querySelector(".shareBtn");
 shareBtn.addEventListener("click", ()=>{
-  document.querySelector(".shareMenu").classList.toggle("hide")
+  shareBtn.classList.toggle("active");
+  document.querySelector(".shareMenu").classList.toggle("active")
 })
