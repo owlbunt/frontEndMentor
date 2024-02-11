@@ -24,6 +24,8 @@
 body{
     font-family:"Manrope";
     font-size: var(--fontSize);
+    height: 100dvh;
+    width: 100dvw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,28 +38,36 @@ body{
 .container{
     background:var(--white);
     width: calc(100% - 50px);
-    max-width: 350px;
+    max-width: 400px;
     box-sizing: border-box;
     overflow: hidden;
+    border-radius: 10px;
+    position: relative;
 }
 
 /* Article Image */
 .postImg{
     aspect-ratio: 6/4;
     overflow: hidden;
+    background: red;
 }
 .postImg img{
     width: 100%;
+    transition: all .3s ease;
+}
+.postImg img:hover{
+  transform: scale(1.2);
 }
 
 /* Article Info */
 .postInfo{
-    padding: 30px;
+    padding:20px;
+    padding-bottom: 10px;
 }
 
 /* Post Title  */
 .postTitle{
-    font-size: 16px;
+    font-size: 18px;
     color: var(--darkGrayishBlue);
 }
 
@@ -65,19 +75,96 @@ body{
 .postDesc{
     line-height: 1.5;
     word-spacing: 1px;
+    letter-spacing: 1px;
     color: var(--desaturatedDarkBlue);
 }
 
 /* Author Info */
 .authorInfo{
-    background: red;
+    background:inherit;
     display: flex;
     align-items: center;
-
+    position: relative;
+    margin-top: 30px;
+    background: inherit;
+    height: 60px;
 }
 
 /* Author Img */
 .authorImg{
     max-height: 40px;
     border-radius: 100%;
+    margin-right: 10px;
+}
+
+/* Author Name */
+.authorName{
+  width: 100%;
+  margin:0 0 3px 0;
+  font-weight:700;
+  color: var(--darkGrayishBlue);
+}
+
+/* Publish Date */
+.publishDate{
+  color: var(--desaturatedDarkBlue);
+}
+
+/* Post Share */
+.shareBtn{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: var(--lightGrayishBlue);
+  padding: 10px;
+  border-radius: 100%;
+  z-index:3 ;
+}
+
+/* Share Menu */
+.shareMenu{
+  position: absolute;
+  background: var(--darkGrayishBlue);
+  bottom: 0;
+  left:0;
+  z-index: 2;
+  height: 80px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  transition: all .3s ease;
+}
+.shareMenu.hide{
+  display: none;
+  transition: all .3s ease;
+}
+
+.shareMenu .text{
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--lightGrayishBlue);
+  margin: 0 4% 0 0;
+}
+.shareMenu .icon{
+  margin: 0 3%;
+  display: grid;
+  place-items: center;
+}
+
+
+/* Responaive Design */
+@media screen and (min-width:992px){
+  .container{
+    display: flex;
+    max-width: 700px;
+  }
+  
+  /* Post Image */
+  .postImg img{
+    height: 100%;
+    width:100%;
+  }
 }
