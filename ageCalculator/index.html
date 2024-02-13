@@ -6,8 +6,26 @@
   <title>Age calculator app</title>
   <!-- [ External CSS ] -->
   <link rel="stylesheet" href="assets/style.css">
-
 </head>
 <body>
+  <!-- [Main Container] -->
+  <main class="container">
+    <!-- [Date Input] -->
+    <div class="dateInput">
+      <input placeholder="DD" type="number" name="day" id="day">
+      <input placeholder="MM" type="number" name="month" id="month">
+      <input placeholder="YYYY" type="number" name="year" id="year">
+    </div>
+    <!-- [Submit Button] -->
+    <div class="checkAge">
+      <button class="submitBtn"><img src="assets/images/icon-arrow.svg" alt="Submit Icon"></button>
+    <!-- [Output Section] -->
+    </div>
+    <div class="totalAge">
+      <h1><span class="totalYears">--</span> years</h1>
+      <h1><span class="totalMonths">--</span> months</h1>
+      <h1><span class="totalDays">--</span> days</h1>
+    </div>
+  </main>
 </body>
 </html>

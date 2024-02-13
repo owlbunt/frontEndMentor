@@ -1,0 +1,114 @@
+/* Universal Values */
+:root{
+    --purple : #854dff;
+    --lightRed : hsl(0, 100%, 67%);
+    --white : #fafafc;
+    --offWhite : #f0f0f0;
+    --lightGray :  #dbdbdb;
+    --smokeyGray : #716f6f;
+    --offBlack : #141414;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+/* Body */
+body{
+    height: 100dvh;
+    width: 100dvw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    background: var(--offWhite);
+    font-family: "Poppins";
+}
+
+/* Main container */
+.container{
+    box-sizing: border-box;
+    background: var(--white);
+    width: calc(100% - 30px);
+    border-radius: 25px 25px 100px 25px;
+    padding: 4rem 1rem 2rem 1rem;
+    position: relative;
+    max-width:670px;
+}
+
+/* Date Input  */
+.dateInput{
+    display: flex;
+    box-sizing: border-box;
+}
+.dateInput input{
+    width: 33.3%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 15px;
+    margin:0 .5rem;
+    border-radius: 10px;
+    border: 1px solid var(--lightGray);
+}
+
+/* Check Age */
+.checkAge{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.checkAge::before{
+    height: 1px;
+    width: 100%;
+    background: var(--lightGray);
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Submit Button */
+.submitBtn{
+    background: var(--purple);
+    border: 0;
+    border-radius: 100%;
+    height: 3.8rem;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin: 2rem 0;
+}
+.submitBtn img{
+    height: 1.3rem;
+}
+
+
+/* Total Age */
+.totalAge{
+    padding:0 .5rem;
+}
+.totalAge span{
+    color: var(--purple);
+    font-style: normal;
+}
+.totalAge h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
+}
