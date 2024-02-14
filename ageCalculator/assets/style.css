@@ -45,24 +45,60 @@ body{
     background: var(--white);
     width: calc(100% - 30px);
     border-radius: 25px 25px 100px 25px;
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 4.5rem 1rem 2rem 1rem;
     position: relative;
-    max-width:670px;
+    max-width: 375px;
+    transition: all .3s ease;
 }
 
 /* Date Input  */
 .dateInput{
     display: flex;
     box-sizing: border-box;
+    width: 100%;
 }
-.dateInput input{
-    width: 33.3%;
-    font-size: 1.2rem;
+.dateInput .input{
+    width:33.3%;
+    margin: 0 8px;
+    position: relative;
+}
+.dateInput .input::before{
+    display: inline-block;
+    content: 'DAY';
+    position: absolute;
+    top: -45%;
+    left: 0;
+    font-size: .8rem;
     font-weight: 700;
-    padding: 15px;
-    margin:0 .5rem;
-    border-radius: 10px;
+    letter-spacing: 2px;
+    color: var(--smokeyGray);
+}
+.dateInput .input.month::before{
+    content: 'MONTH';
+}
+.dateInput .input.year::before{
+    content: 'YEAR';
+}
+
+.dateInput .input input{
+    box-sizing: border-box;
+    width: 100%;
     border: 1px solid var(--lightGray);
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Remove Arrows from number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* Check Age */
@@ -86,10 +122,8 @@ body{
     background: var(--purple);
     border: 0;
     border-radius: 100%;
-    height: 3.8rem;
+    height: 4rem;
     aspect-ratio: 1/1;
-    display: grid;
-    place-items: center;
     position: relative;
     margin: 2rem 0;
 }
@@ -108,7 +142,24 @@ body{
 }
 .totalAge h1{
     margin: 0;
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
     font-style: italic;
+    line-height: 1.2;
+}
+
+/* Resposive */
+@media screen and (min-width:768px){
+    /* Container */
+    .container{
+        max-width: 650px;
+    }
+    /* Submit button */
+    .checkAge{
+        justify-content: end;
+    }
+    /* Total Age */
+    .totalAge h1{
+        font-size: 3.5rem;
+    }
 }
