@@ -19,9 +19,9 @@ submitBtn.addEventListener("click", ()=>{
   
   // Calculate Age 
   let dobInMs = new Date(`${dob.year}-${dob.month}-${dob.day}T00:00:00`).getTime();
-  let currentAgeInMs = currentTime - dobInMs;
-  let currentAgeInYear = Math.floor(currentAgeInMs / 1000 / 60 / 60 / 24 / 365.25)
-  console.log(currentAgeInMs)
+  let currentAgeInDays = currentTime - dobInMs ;
+  currentAgeInDays = Math.floor(currentAgeInDays /1000/60/60/24);
+  console.log(currentAgeInDays)
   
   
   // Update The Age
