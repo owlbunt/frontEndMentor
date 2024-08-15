@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Interactive Card Details</title>
+  
+  <!-- [External CSS] -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Background Section -->
+    <div class="sectionOne">
+    </div>
+    <!-- Card Details Section -->
+    <div class="sectionTwo">
+      <form action="">
+          <!-- Name -->
+          <label for="Name">CARDHOLDER NAME</label>
+          <input type="text" name="Name" id="Name" placeholder="e.g. Jane Appleseed">
+          <!-- Card Number -->
+          <label for="cardNumber"CARD NUMBER></label>
+          <input type="number" name="Card Number" id="cardNumber" placeholder="1234 5678 9123 0000">
+          <div class="otherInfo">
+            <!-- Exp Date/Month -->
+            <!-- <label for="expMonth">Exp. Date (MM/YY)</label> -->
+            <input type="text" name="Month" id="expMonth" placeholder="MM">
+            <input type="text" name="Year" id="expYear" placeholder="YY">
+            <!-- CVV Number -->
+            <!-- <label for="cvv">CVV</label> -->
+            <input type="number" name="CVV" id="cvv" placeholder="123">
+          </div>
+          <!-- Submit Button -->
+          <input type="submit" value="Confirm">
+      </form>
+    </div>
+  </div>
+
+  <!-- [External JS] -->
+  <script src="assets/script.js"></script>
+</body>
+</html>

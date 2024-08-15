@@ -1,0 +1,94 @@
+/* Universal Values */
+:root{
+    --cardBg : hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red : hsl(0, 100%, 66%);
+    --white : hsl(0, 0%, 100%);
+    --lightGrayishViolet : hsl(270, 3%, 87%);
+    --darkGrayishViolet  : hsl(279, 6%, 55%);
+    --veryDarkViolet : hsl(278, 68%, 11%);
+}
+
+/* Custom Font */
+@font-face{
+    font-family: "Space Grotesk";
+    font-weight: 300;
+    src: url("fonts/SpaceGrotesk-Light.ttf");
+}
+@font-face{
+    font-family: "Space Grotesk";
+    font-weight: 400;
+    src: url("fonts/SpaceGrotesk-Regular.ttf");
+}
+@font-face{
+    font-family: "Space Grotesk";
+    font-weight: 500;
+    src: url("fonts/SpaceGrotesk-Medium.ttf");
+}
+@font-face{
+    font-family: "Space Grotesk";
+    font-weight: 600;
+    src: url("fonts/SpaceGrotesk-SemiBold.ttf");
+}
+@font-face{
+    font-family: "Space Grotesk";
+    font-weight: 700;
+    src: url("fonts/SpaceGrotesk-Bold.ttf");
+}
+
+/* Body */
+body{
+    font-size:18px;
+    font-family: "Space Grotesk";
+    font-weight: 400;
+    height: 100dvh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Container */
+.container{
+    background: red;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+/* Section One */
+.sectionOne{
+    background: var(--white);
+    background-image: url("images/bg-main-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Section Two */
+.sectionTwo{
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        width: 50%;
+        input{
+            display: block;
+            padding: .8rem .5rem;
+            border: .05rem solid var(--lightGrayishViolet);
+            border-radius:.5rem;
+            margin: .5rem 0;
+        }
+    }
+    .otherInfo{
+        width: 100%;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        input{
+            width:100%;
+            box-sizing: border-box;
+        }
+    }
+}
